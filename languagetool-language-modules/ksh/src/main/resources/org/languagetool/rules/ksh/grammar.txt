@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/print.xsl" ?>
+<?xml-stylesheet type="text/css" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.css"
+        title="Easy editing stylesheet" ?>
+<!--
+Colognian Grammar and Typo Rules for LanguageTool
+See tagset.txt for the meaning of the POS tags
+Copyright (C) 2001-2015 Daniel Naber (http://www.danielnaber.de),
+  Marcin Miłkowski
+	Purodha Blissenbach and the LanguageTool contributors
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301
+USA
+
+-->
+
+<!DOCTYPE rules [
+    <!ENTITY weekdays "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday">
+    <!ENTITY abbrevWeekdays "Mon|Mo|Tue|Tu|Wed|We|Thu|Th|Fri|Fr|Sat|Sa|Sun|Su">
+    <!ENTITY months "January|February|March|April|May|June|July|August|September|October|November|December">
+    <!ENTITY abbrevMonths "Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec">
+]>
+
+<rules lang="en" xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- ====================================================================== -->
+    <!-- Possible typos -->
+    <!-- ====================================================================== -->
+    <category name="Possible Typo" type="misspelling">
+        <rule id="UND" name="und">
+            <pattern>
+                <token>und</token>
+            </pattern>
+            <message>You most ikely meant <suggestion>un</suggestion>, right?</message>
+            <suggestion>un</suggestion>
+        </rule>
+    </category>
+    <!-- ====================================================================== -->
+    <!-- Grammar -->
+    <!-- ====================================================================== -->
+    <category name="Grammar" type="grammar">
+    </category>
+    <category name="Collocations" type="grammar">
+    </category>
+    <!-- ====================================================================== -->
+    <!-- Miscellaneous -->
+    <!-- ====================================================================== -->
+    <category name="Miscellaneous">
+    </category>
+    <category name="Punctuation Errors" type="typographical">
+    </category>
+    <category name="Commonly Confused Words" type="misspelling">
+    </category>
+    <category name="Nonstandard Phrases" type="misspelling">
+    </category>
+    <category name="Slang" type="register">
+    </category>
+    <category name="Redundant Phrases" type="style">
+    </category>
+    <category name="Bad style" type="style">
+    </category>
+    <category name="Semantic" type="inconsistency">
+    </category>
+    <category name="Plain English" type="style" default="off">
+    </category>
+    <category name="Wikipedia" default="off">
+    </category>
+    <!-- This rule is useful only for lowercase only text after machine translation. I leave it in the
+    file because it's not so bad for such input but it shouldn't be even visible in the config dialog.
+    Maybe it should go some repository online?
+    <category name="Capitalization" type="typographical">
+    </category>
+    -->
+
+</rules>
